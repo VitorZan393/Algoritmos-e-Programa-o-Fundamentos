@@ -11,9 +11,8 @@ int main() {
 
     srand(time(NULL));
 
-    // a. Sorteio dos consumos entre 100 e 500 litros
     for (int i = 0; i < DIAS; i++) {
-        consumo[i] = 100 + rand() % 401; // 100 a 500
+        consumo[i] = 100 + rand() % 401; 
         total += consumo[i];
 
         if (i == 0 || consumo[i] > maior) {
@@ -27,13 +26,8 @@ int main() {
         }
     }
 
-    // b. Total do mês
     printf("Consumo total no mês: %d litros\n", total);
-
-    // c. Média diária
     printf("Média de consumo diário: %.2f litros\n", total / (float)DIAS);
-
-    // d. Dia com maior e menor consumo
     printf("Maior consumo: %d litros (Dia %d)\n", maior, diaMaior);
     printf("Menor consumo: %d litros (Dia %d)\n", menor, diaMenor);
 

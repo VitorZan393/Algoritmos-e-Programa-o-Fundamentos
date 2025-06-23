@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+?????
+#define JOGADORES 4
+#define RODADAS 5
+
+int main() {
+    int pontos[JOGADORES] = {0};
+    int rodada, jogador;
+    int pontuacao;
+
+    srand(time(NULL));
+
+    for (rodada = 1; rodada <= RODADAS; rodada++) {
+        printf("\nRodada %d\n", rodada);
